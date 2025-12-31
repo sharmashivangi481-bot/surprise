@@ -1,57 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>For Marzia ❤️</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Marzia ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family:'Comic Sans MS',cursive;
+  background:linear-gradient(135deg,#ff5f9e,#ff0844);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  color:white;
+}
+.container{
+  text-align:center;
+  background:rgba(255,255,255,0.15);
+  padding:30px;
+  border-radius:20px;
+}
+button{
+  padding:15px 30px;
+  font-size:20px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:#ff0844;
+  cursor:pointer;
+}
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+</style>
 </head>
 
-<body class="bg">
+<body>
 
-<!-- PASSWORD SCREEN -->
-<div id="lockScreen" class="lock">
-  <h1>💖 Private Surprise 💖</h1>
-  <p>Enter our secret</p>
-  <input type="password" id="password" placeholder="❤️">
-  <button onclick="unlock()">Unlock</button>
-  <p id="error"></p>
+<div class="container">
+  <h1>Happy Birthday Marzia 🎂💖</h1>
+  <p>
+    Mera pyaar aapke liye badhta hi rahega<br>
+    <b>my wifey ♥️</b>
+  </p><br>
+  <button onclick="location.href='memorylane.html'">Let’s Go ✨</button>
 </div>
 
-<!-- MAIN CONTENT -->
-<div id="content" style="display:none;">
-  <!-- Background Music -->
-  <audio autoplay loop>
-    <source src="music/gehra-hua.mp3" type="audio/mp3">
-  </audio>
+<!-- BACKGROUND MUSIC -->
+<audio autoplay loop>
+  <source src="music/gehra-hua.mp3" type="audio/mp3">
+</audio>
 
-  <canvas id="confetti"></canvas>
-
-  <div class="center">
-    <h1>Happy Birthday, Marzia 🎂💖</h1>
-    <p class="love-text">
-      Mera pyaar aapke liye badhta hi rahega <br>
-      <b>my wifey ♥️</b>
-    </p>
-
-    <div class="buttons">
-      <a href="cake.html">🎂 Cut the Cake</a>
-      <a href="memorylane.html">📸 Memory Lane</a>
-      <a href="letter.html">💌 My Letter</a>
-    </div>
-  </div>
-</div>
-
-<script>
-function unlock(){
-  const pass = document.getElementById("password").value;
-  if(pass === "M & S ♥️"){
-    document.getElementById("lockScreen").style.display="none";
-    document.getElementById("content").style.display="block";
-  } else {
-    document.getElementById("error").innerText="Wrong secret 💔";
-  }
-}
-</script>
+<canvas id="confetti"></canvas>
 
 <script src="confetti.js"></script>
 </body>
